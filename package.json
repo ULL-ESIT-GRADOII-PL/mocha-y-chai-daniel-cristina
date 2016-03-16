@@ -1,16 +1,16 @@
 {
-  "name": "mocha-chai-sinon",
+  "name": "mocha-y-chai-daniel-cristina",
   "version": "0.0.0",
-  "description": "See the tutorial at: https://nicolas.perriault.net/code/2013/testing-frontend-javascript-code-using-mocha-chai-and-sinon/",
-  "main": "assets/js/main.js",
+  "description": "See conversor: http://ull-esit-gradoii-pl.github.io/mocha-y-chai-daniel-cristina/",
+  "main": "js/main.js",
   "scripts": {
-    "test": "open mocha.html",
+    "test": "open test.html",
     "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o vendor/chai.js",
     "sinon": "curl http://sinonjs.org/releases/sinon-1.12.2.js -o vendor/sinon-1.12.2.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/crguezl/mocha-chai-sinon--example.git"
+    "url": "git://github.com/ULL-ESIT-GRADOII-PL/mocha-y-chai-daniel-cristina"
   },
   "devDependencies" : {
   },
