@@ -31,14 +31,15 @@ Medida.convertir = function(valor) {
   measures.c = Celsius;
   measures.f = Farenheit;
   measures.k = Kelvin;
+  measures.K = Kelvin;
+  measures.F = Farenheit;
+  measures.C = Celsius;
 
   var match = Medida.match(valor);
   if (match) {
     var numero = parseFloat(match.num),
-        tipoant   = match.temp1,
-		tipo   = tipoant.toLowerCase(),
-        destinoant = match.temp2,
-		destino  = destinoant.toLowerCase();
+        tipo   = match.temp1,
+        destino = match.temp2;
 	
     try {
       console.log(measures[tipo]);

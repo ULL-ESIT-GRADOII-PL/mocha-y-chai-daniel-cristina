@@ -39,6 +39,15 @@ describe("Temperatura", function() {
       expect(temperatura.value).to.equal('32');
       expect(temperatura.type).to.equal('c');
     });
+
+    it("Debería ser de la clase Medida", function() {
+      var temperatura = new Temperatura('32', 'f');
+      expect(temperatura.value).to.equal('32');
+      expect(temperatura.type).to.equal('f');
+
+      expect(temperatura).to.be(Temperatura);
+    });
+
   });
 
   describe("Celsius: Constructor, #toFarenheit, #toKelvin", function() {
@@ -49,7 +58,7 @@ describe("Temperatura", function() {
       expect(temperatura.toKelvin()).to.equal(305.15);
       var cel = new Celsius(32, 'f');
 
-      expect(cel).to.be.a(Temperatura);
+      expect(cel).to.be.a('Temperatura');
 
     });
   });
@@ -79,6 +88,44 @@ describe("Temperatura", function() {
   });
 
 });
+
+
+
+
+
+describe('Conversiones', function() {
+    describe('Celsius', function () {
+        var medida = new Celsius(0);
+        it('toFahrenheit"', function () {
+            expect(medida.toFarenheit()).to.equal(32);
+        });
+
+        it('toKelvin"', function () {
+          expect(medida.toKelvin()).to.equal(273.15);
+        });
+    });
+    describe('Kelvin', function () {
+        var medida = new Kelvin(273.15);
+        it('toFahrenheit"', function () {
+            expect(medida.toFarenheit()).to.equal(32);
+        });
+
+        it('toCelsius"', function () {
+          expect(medida.toCelsius()).to.equal(0);
+        });
+    });
+    describe('Farenheit', function () {
+        var medida = new Farenheit(32);
+        it('toCelsius"', function () {
+          expect(medida.toCelsius()).to.equal(0);
+        });
+
+        it('toKelvin"', function () {
+          expect(medida.toKelvin()).to.equal(273.15);
+        });
+    });
+});
+
 /*
 describe("Conversor", function() {
   describe("Funciones de conversion", function() {
