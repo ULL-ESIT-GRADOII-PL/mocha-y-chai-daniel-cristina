@@ -1,0 +1,8 @@
+h4,span{color:#E53E5D}
+html{background-color:#A3E3DD}
+footer{position:fixed;bottom:0;left:0;width:100%;padding:10px;background-color:#2F4C4A}
+footer a{color:#FFF;text-decoration:none}
+.app{margin-top:10%}
+h4{font-weight:700}
+@media (max-width:550px){footer{text-align:center}
+}
