@@ -1,19 +1,23 @@
 var expect = chai.expect;
 
 describe("Medida", function() {
-/*
   describe("constructor", function() {
+    it("deberia tener un constructor", function() {
+      var medida = new Medida (32, 'f');
+      expect(medida.valor).to.equal(32);
+    });
+    it("deberia poder recibir un solo parametro", function() {
+     var medida = new Medida ("5 f");
+     expect(medida.valor).to.equal(5);
+     expect(medida.tipo).to.equal('f');
+   });
+
     it("Deberia dar valor a los atributos (tipo, valor) ", function() {
-      var aux = new Medida("32", "c");
-      expect(aux.value).to.equal("32");
-      expect(aux.type).to.equal("c");
+      var aux = new Temperatura("32", "c");
+      expect(aux.valor).to.equal("32");
+      expect(aux.tipo).to.equal("c");
     });
-    it("Deberia crear el objeto sin tipo ", function() {
-      var aux = new Medida("32c");
-      expect(aux.value).to.equal("32");
-      expect(aux.type).to.equal("c");
-    });
-  });*/
+  });
   describe("#convertir", function() {
     it("Deberia convertir de F a C", function() {
       expect(Medida.convertir("32f to c")).to.equal("0.00 Celsius");
@@ -28,30 +32,29 @@ describe("Medida", function() {
 });
 
 describe("Temperatura", function() {
-/*
   describe("Constructor", function() {
     it("Debería aceptar un valor y un tipo", function() {
       var temperatura = new Temperatura(57, 'f');
-      expect(temperatura.value).to.equal(57);
-      expect(temperatura.type).to.equal('f');
+      expect(temperatura.valor).to.equal(57);
+      expect(temperatura.tipo).to.equal('f');
     });
 
     it("Debería aceptar un valor y un tipo en un mismo parámetro", function() {
       var temperatura = new Temperatura("32c");
-      expect(temperatura.value).to.equal('32');
-      expect(temperatura.type).to.equal('c');
+      expect(temperatura.valor).to.equal(32);
+      expect(temperatura.tipo).to.equal('c');
     });
 
-    it("Debería ser de la clase Medida", function() {
-      var temperatura = new Temperatura('32', 'f');
-      expect(temperatura.value).to.equal('32');
-      expect(temperatura.type).to.equal('f');
-
-      expect(temperatura).to.be(Temperatura);
-    });
-
-  });*/
 /*
+    it("Debería ser hija de la clase Medida", function() {
+      var temperatura = new Temperatura("32", 'f');
+      expect(Medida.valor).to.equal('32');
+      expect(Medida.tipo).to.equal('f');
+      expect(temperatura).to.be.instanceof(Medida);
+    });*/
+
+  });
+
   describe("Celsius: Constructor, #toFarenheit, #toKelvin", function() {
     it("Debería convertir de una temperatura cualquiera a Celsius", function() {
 
@@ -60,11 +63,11 @@ describe("Temperatura", function() {
       expect(temperatura.toKelvin()).to.equal(305.15);
       var cel = new Celsius(32, 'f');
 
-      expect(cel).to.be.a('Temperatura');
+    //  expect(cel).to.be.a('Temperatura');
 
     });
   });
-*/
+
   describe("Farenheit: Constructor, #toCelsius, #toKelvin", function() {
     it("Debería convertir de una temperatura cualquiera a Celsius", function() {
 
@@ -130,14 +133,13 @@ describe('Conversiones', function() {
 
 
 
-describe("Creación de un objeto Temperatura", function(){
-   var temperatura = new Temperatura(23,'F');
-   it("Debe tener un número", function(){
-      expect(temperatura.valor).to.equal(23);
-   });
-   it("Debe tener una unidad de medida", function(){
-      expect(temperatura.tipo).to.equal('F');
-   });
+describe("funcion match", function () {
+it("debería aceptar patron", function () {
+ var valor = Medida.match('330e-1 f to c');
+ expect(parseFloat(valor.num)).to.equal(330e-1);
+ expect(valor.temp1).to.equal('f');
+ expect(valor.temp2).to.equal('c');
+});
 });
 /*
 describe("Conversor", function() {

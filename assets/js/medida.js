@@ -1,18 +1,14 @@
 function Medida(valor,tipo) {
-   
-   if (!tipo) {
-	   expr = XRegExp('(?<num>      [-+]?[^\\.][0-9]+([\\.][0-9]+)?\\s*(?:e[+-]?[ ]*[0-9]+)?)\\s*   # numero       \n' +
-                       '(?<temp1>    [fkcFKC])\\s*                                                   # temperatura1','x');
 
-	   
-     cadena = XRegExp.exec(valor, expr);
-     this.valor = cadena.num;
-     this.tipo = cadena.temp1;
-   }
-   else {
-     this.valor = valor;
-     this.tipo = tipo;
-   }
+  var regexp = /^\s*([-+]?\d+(?:\.\d*)?(?:e[-+]?\d+)?)\s*([a-zA-Z])\s*$/i;
+    var val = regexp.exec(valor);
+    if (val) {
+      this.valor = parseFloat(val[1]);
+      this.tipo = val[2];
+    } else {
+      this.valor = valor;
+      this.tipo = tipo;
+    }
 }
 
 Medida.match = function(valor) {
@@ -42,7 +38,7 @@ Medida.convertir = function(valor) {
     var numero = parseFloat(match.num),
         tipo   = match.temp1,
         destino = match.temp2;
-	
+
     try {
       console.log(measures[tipo]);
       var source = new measures[tipo](numero);  // new Fahrenheit(32)
