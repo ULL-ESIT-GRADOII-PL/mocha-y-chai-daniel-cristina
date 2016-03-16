@@ -1,25 +1,30 @@
 {
-  "name": "Conversor",
-  "version": "0.0.1",
-  "description": "Conversor javascript de tipos",
-  "main": "conversor.js",
+  "name": "mocha-chai-sinon",
+  "version": "0.0.0",
+  "description": "See the tutorial at: https://nicolas.perriault.net/code/2013/testing-frontend-javascript-code-using-mocha-chai-and-sinon/",
+  "main": "assets/js/main.js",
   "scripts": {
-    "test": "mocha test",
-    "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o test/chai.js"
+    "test": "open mocha.html",
+    "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o vendor/chai.js",
+    "sinon": "curl http://sinonjs.org/releases/sinon-1.12.2.js -o vendor/sinon-1.12.2.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aluXXXXXXX/STW03.git"
+    "url": "git://github.com/crguezl/mocha-chai-sinon--example.git"
+  },
+  "devDependencies" : {
   },
   "keywords": [
-    "conversor"
+    "mocha",
+    "chai",
+    "sinon",
+    "testing",
+    "javascript"
   ],
-  "author": "",
+  "author": "Casiano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aluXXXXXXX/STW03/issues"
+    "url": "https://github.com/crguezl/mocha-chai-sinon--example/issues"
   },
-  "homepage": "https://github.com/aluXXXXXXX/STW03",
-  "devDependencies": {
-  }
+  "homepage": "https://github.com/crguezl/mocha-chai-sinon--example"
 }
