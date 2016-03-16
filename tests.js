@@ -1,5 +1,14 @@
 var expect = chai.expect;
 
+describe("Clase Celsius", function () {
+  describe("constructor celsius", function () {
+    it("deberia tener un constructor", function () {
+      var cel = new Celsius (320e-1);
+      expect(cel.valor).to.equal(320e-1);
+    });
+  });
+
+
 describe("Medida", function() {
   describe("constructor", function() {
     it("deberia tener un constructor", function() {
