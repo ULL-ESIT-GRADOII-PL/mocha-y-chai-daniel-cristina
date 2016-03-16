@@ -25,6 +25,53 @@ describe("Medida", function() {
     });
   });
 });
+
+describe("Temperatura", function() {
+  describe("Constructor", function() {
+    it("Debería aceptar un valor y un tipo", function() {
+      var temperatura = new Temperatura(57, 'f');
+      expect(temperatura.value).to.equal(57);
+      expect(temperatura.type).to.equal('f');
+    });
+
+    it("Debería aceptar un valor y un tipo en un mismo parámetro", function() {
+      var temperatura = new Temperatura("32c");
+      expect(temperatura.value).to.equal('32');
+      expect(temperatura.type).to.equal('c');
+    });
+  });
+
+  describe("Celsius: Constructor, #toFarenheit, #toKelvin", function() {
+    it("Debería convertir de una temperatura cualquiera a Celsius", function() {
+
+      var temperatura = new Celsius(32);
+      expect(temperatura.toFarenheit()).to.equal(89.6);
+      expect(temperatura.toKelvin()).to.equal(305.15);
+
+    });
+  });
+
+  describe("Farenheit: Constructor, #toCelsius, #toKelvin", function() {
+    it("Debería convertir de una temperatura cualquiera a Celsius", function() {
+
+      var temperatura = new Farenheit(32);
+      expect(temperatura.toCelsius()).to.equal(0);
+      expect(temperatura.toKelvin()).to.equal(273.15);
+
+    });
+  });
+
+  describe("Kelvin: Constructor, #toFarenheit, #toCelsius", function() {
+    it("Debería convertir de una temperatura cualquiera a Celsius", function() {
+
+      var temperatura = new Kelvin(273.15);
+      expect(temperatura.toFarenheit()).to.equal(32);
+      expect(temperatura.toCelsius()).to.equal(0);
+
+    });
+  });
+
+});
 /*
 describe("Conversor", function() {
   describe("Funciones de conversion", function() {
