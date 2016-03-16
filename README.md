@@ -1,4 +1,4 @@
-# Práctica Eliminacion Switch Smell
+# Práctica Pruebas Mocha y Chai
 
 Esta es una nueva versión de la práctica de conversión de temperaturas (Kelvin, Celsius, Farenheit) en la que utilizamos Mocha y Chai para realizar
 pruebas en nuestro código. Recordar que el código Switch Smell ha sido eliminado.

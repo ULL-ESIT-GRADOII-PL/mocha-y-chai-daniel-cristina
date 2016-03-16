@@ -47,7 +47,9 @@ describe("Temperatura", function() {
       var temperatura = new Celsius(32);
       expect(temperatura.toFarenheit()).to.equal(89.6);
       expect(temperatura.toKelvin()).to.equal(305.15);
-      expect(temperatura).to.be.instanceof(Celsius);
+      var cel = new Celsius(32, 'f');
+
+      expect(cel).to.be.a(Temperatura);
 
     });
   });
