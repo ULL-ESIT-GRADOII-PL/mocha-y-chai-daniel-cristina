@@ -1,15 +1,17 @@
 function Medida(valor,tipo) {
-   expr = XRegExp('(?<num>      [-+]?[^\\.][0-9]+([\\.][0-9]+)?\\s*(?:e[+-]?[ ]*[0-9]+)?)\\s*   # numero       \n' +
+   
+   if (!tipo) {
+	   expr = XRegExp('(?<num>      [-+]?[^\\.][0-9]+([\\.][0-9]+)?\\s*(?:e[+-]?[ ]*[0-9]+)?)\\s*   # numero       \n' +
                        '(?<temp1>    [fkcFKC])\\s*                                                   # temperatura1','x');
 
-   if (!tipo) {
+	   
      cadena = XRegExp.exec(valor, expr);
-     this.value = cadena.num;
-     this.type = cadena.temp1;
+     this.valor = cadena.num;
+     this.tipo = cadena.temp1;
    }
    else {
-     this.value = valor;
-     this.type = tipo;
+     this.valor = valor;
+     this.tipo = tipo;
    }
 }
 
