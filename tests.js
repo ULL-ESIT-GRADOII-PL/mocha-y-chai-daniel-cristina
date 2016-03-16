@@ -47,6 +47,7 @@ describe("Temperatura", function() {
       var temperatura = new Celsius(32);
       expect(temperatura.toFarenheit()).to.equal(89.6);
       expect(temperatura.toKelvin()).to.equal(305.15);
+      expect(temperatura).to.be.instanceof(Celsius);
 
     });
   });
@@ -57,6 +58,8 @@ describe("Temperatura", function() {
       var temperatura = new Farenheit(32);
       expect(temperatura.toCelsius()).to.equal(0);
       expect(temperatura.toKelvin()).to.equal(273.15);
+      expect(temperatura).to.be.instanceof(Farenheit);
+
 
     });
   });
@@ -67,6 +70,8 @@ describe("Temperatura", function() {
       var temperatura = new Kelvin(273.15);
       expect(temperatura.toFarenheit()).to.equal(32);
       expect(temperatura.toCelsius()).to.equal(0);
+      expect(temperatura).to.be.instanceof(Kelvin);
+
 
     });
   });
