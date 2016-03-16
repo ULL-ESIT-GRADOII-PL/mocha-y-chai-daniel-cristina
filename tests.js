@@ -7,7 +7,7 @@ describe("Clase Celsius", function () {
       expect(cel.valor).to.equal(320e-1);
     });
   });
-
+});
 
 describe("Medida", function() {
   describe("constructor", function() {
