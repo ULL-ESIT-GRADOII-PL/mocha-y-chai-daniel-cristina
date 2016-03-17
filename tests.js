@@ -5,6 +5,7 @@ describe("Clase Celsius", function () {
     it("deberia tener un constructor", function () {
       var cel = new Celsius (320e-1);
       expect(cel.valor).to.equal(320e-1);
+	  expect(cel).to.be.instanceof(Celsius);
     });
   });
 });
