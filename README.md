@@ -11,6 +11,9 @@ En ella realizamos pruebas para cada una de las clases definidas siguiendo POO y
 
 * Fichero gulpfile.js con tareas minify para compactar el HTML, el CSS y el JavaScript.
 
+**Enlace a test**
+
+* [Test](http://ull-esit-gradoii-pl.github.io/mocha-y-chai-daniel-cristina/test.html)
 
 **Repositorio GitHuB**
 
